@@ -3,17 +3,15 @@ import { useState } from 'react';
 
 import './Editor.css';
 
-export default function Editor({ setTitle }) {
+export default function Editor({ setTitle, setSubtitle, setText }) {
   const handleTitle = (e) => {
     setTitle(e.target.value);
   };
   const handleSubtitle = (e) => {
-    console.log('e.target.value', e.target.value);
-    // setSubtitle(e.target.value);
+    setSubtitle(e.target.value);
   };
   const handleText = (e) => {
-    console.log('e.target.value', e.target.value);
-    // setText(e.target.value);
+    setText(e.target.value);
   };
 
   return (
