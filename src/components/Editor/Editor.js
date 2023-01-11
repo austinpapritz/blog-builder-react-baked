@@ -16,6 +16,9 @@ export default function Editor({ setTitle, setSubtitle, setText, setFont }) {
   const handleFont = (e) => {
     setFont(e.target.value);
   };
+  const handleAlignment = (e) => {
+    console.log('e.target.value', e.target.value);
+  };
 
   return (
     <div className="editor">
@@ -42,7 +45,7 @@ export default function Editor({ setTitle, setSubtitle, setText, setFont }) {
       </div>
       <div className="form-control">
         <label>Alignment</label>
-        <div className="radio-group">
+        <div className="radio-group" onClick={handleAlignment}>
           <label>
             <input name="align" type="radio" value="left" />
             <i className="ri-align-left"></i>
