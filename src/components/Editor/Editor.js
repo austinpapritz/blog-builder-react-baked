@@ -1,20 +1,27 @@
 import React from 'react';
+import { useState } from 'react';
 
 import './Editor.css';
 
-export default function Editor() {
-  function handleChange() {
-    console.log('new text');
-  }
+export default function Editor({ setTitle }) {
+  const handleTitle = (e) => {
+    setTitle(e.target.value);
+  };
+  const handleSubtitle = (e) => {
+    setTitle(e.target.value);
+  };
+  const handleText = (e) => {
+    setTitle(e.target.value);
+  };
 
   return (
     <div className="editor">
       <div className="form-control">
-        <input name="title" type="text" onChange={handleChange} />
+        <input name="title" type="text" onChange={handleTitle} />
         <label htmlFor="title">Title</label>
       </div>
       <div className="form-control">
-        <input type="text" onChange={handleChange} />
+        <input type="text" onChange={handleSubtitle} />
         <label>Subtitle</label>
       </div>
       <div className="form-control">
@@ -48,7 +55,7 @@ export default function Editor() {
         </div>
       </div>
       <div className="form-control">
-        <textarea style={{ height: '250px' }} onChange={handleChange} />
+        <textarea style={{ height: '250px' }} onChange={handleText} />
         <label>Text</label>
       </div>
     </div>

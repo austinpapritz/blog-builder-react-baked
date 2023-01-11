@@ -8,11 +8,12 @@ import './Home.css';
 
 export default function Home() {
   // add useState calls here for title, subtitle, font, align, and text
+  const [title, setTitle] = useState('Title');
   return (
     <main>
       {/* pass the state variables as props to the presentational components */}
       <Preview />
-      <Editor />
+      <Editor setTitle={setTitle} />
     </main>
   );
 }
