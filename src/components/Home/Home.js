@@ -11,7 +11,7 @@ export default function Home() {
   const [title, setTitle] = useState('Title');
   const [subtitle, setSubtitle] = useState('Subtitle');
   const [text, setText] = useState('Text');
-  const [setFont] = useState('Font');
+  const [font, setFont] = useState('Font');
   return (
     <main>
       {/* pass the state variables as props to the presentational components */}
@@ -22,6 +22,7 @@ export default function Home() {
         setSubtitle={setSubtitle}
         text={text}
         setText={setText}
+        font={font}
       />
       <Editor setTitle={setTitle} setSubtitle={setSubtitle} setText={setText} setFont={setFont} />
     </main>

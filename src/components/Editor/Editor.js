@@ -14,8 +14,7 @@ export default function Editor({ setTitle, setSubtitle, setText, setFont }) {
     setText(e.target.value);
   };
   const handleFont = (e) => {
-    console.log('e.target.value', e.target.value);
-    // setFont(e.target.value);
+    setFont(e.target.value);
   };
 
   return (
