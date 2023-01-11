@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import './Editor.css';
 
-export default function Editor({ setTitle, setSubtitle, setText, setFont }) {
+export default function Editor({ setTitle, setSubtitle, setText, setFont, setAlignment }) {
   const handleTitle = (e) => {
     setTitle(e.target.value);
   };
@@ -17,7 +17,7 @@ export default function Editor({ setTitle, setSubtitle, setText, setFont }) {
     setFont(e.target.value);
   };
   const handleAlignment = (e) => {
-    console.log('e.target.value', e.target.value);
+    setAlignment(e.target.value);
   };
 
   return (
