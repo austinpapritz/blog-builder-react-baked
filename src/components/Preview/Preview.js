@@ -17,7 +17,7 @@ export default function Preview({ title, subtitle, text }) {
     <div className="preview Fredoka">
       <h1>{title}</h1>
       <h3>{subtitle}</h3>
-      <p>Blog text</p>
+      <p>{text}</p>
     </div>
   );
 }
