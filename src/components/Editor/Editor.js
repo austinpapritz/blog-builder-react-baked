@@ -3,14 +3,18 @@ import React from 'react';
 import './Editor.css';
 
 export default function Editor() {
+  function handleChange() {
+    console.log('new text');
+  }
+
   return (
     <div className="editor">
       <div className="form-control">
-        <input name="title" type="text" />
+        <input name="title" type="text" onChange={handleChange} />
         <label htmlFor="title">Title</label>
       </div>
       <div className="form-control">
-        <input type="text" />
+        <input type="text" onChange={handleChange} />
         <label>Subtitle</label>
       </div>
       <div className="form-control">
@@ -44,7 +48,7 @@ export default function Editor() {
         </div>
       </div>
       <div className="form-control">
-        <textarea style={{ height: '250px' }} />
+        <textarea style={{ height: '250px' }} onChange={handleChange} />
         <label>Text</label>
       </div>
     </div>
