@@ -8,10 +8,12 @@ export default function Editor({ setTitle }) {
     setTitle(e.target.value);
   };
   const handleSubtitle = (e) => {
-    setTitle(e.target.value);
+    console.log('e.target.value', e.target.value);
+    // setSubtitle(e.target.value);
   };
   const handleText = (e) => {
-    setTitle(e.target.value);
+    console.log('e.target.value', e.target.value);
+    // setText(e.target.value);
   };
 
   return (
