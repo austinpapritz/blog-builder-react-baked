@@ -13,10 +13,11 @@ export default function Preview() {
   //   <h3> Blog Subtitle</h3>
   //   <p>This is some blog text. </p>
   // </div>
-  <div className="preview Fredoka" style="test-align: center;">
-    <h1> Title </h1>
-    <h3> Subtitle </h3>
-    <p>Blog text</p>
-  </div>;
-  return <></>;
+  return (
+    <div className="preview Fredoka">
+      <h1>Title</h1>
+      <h3>Subtitle</h3>
+      <p>Blog text</p>
+    </div>
+  );
 }
