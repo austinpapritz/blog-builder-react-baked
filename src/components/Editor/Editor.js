@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import './Editor.css';
 
-export default function Editor({ setTitle, setSubtitle, setText }) {
+export default function Editor({ setTitle, setSubtitle, setText, setFont }) {
   const handleTitle = (e) => {
     setTitle(e.target.value);
   };
@@ -12,6 +12,10 @@ export default function Editor({ setTitle, setSubtitle, setText }) {
   };
   const handleText = (e) => {
     setText(e.target.value);
+  };
+  const handleFont = (e) => {
+    console.log('e.target.value', e.target.value);
+    // setFont(e.target.value);
   };
 
   return (
@@ -25,7 +29,7 @@ export default function Editor({ setTitle, setSubtitle, setText }) {
         <label>Subtitle</label>
       </div>
       <div className="form-control">
-        <select>
+        <select onChange={handleFont}>
           <option value="architect">{"Architect's Daughter"}</option>
           <option value="comforter">Comforter</option>
           <option value="fredoka">Fredoka</option>
